@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	xorg-proto-panoramixproto-devel
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXinerama
 BuildRoot:	%{tmpdir}/libXinerama-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -35,6 +36,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXinerama = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-panoramixproto-devel
+Obsoletes:	libXinerama-devel
 
 %description devel
 Xinerama extension library.
@@ -54,6 +56,7 @@ Summary:	Static libXinerama libraries
 Summary(pl):	Biblioteki statyczne libXinerama
 Group:		Development/Libraries
 Requires:	xorg-lib-libXinerama-devel = %{version}-%{release}
+Obsoletes:	libXinerama-static
 
 %description static
 Xinerama extension library.
