@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
 BuildRequires:	xorg-proto-panoramixproto-devel
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXinerama
 BuildRoot:	%{tmpdir}/libXinerama-%{version}-root-%(id -u -n)
