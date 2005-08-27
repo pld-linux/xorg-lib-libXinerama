@@ -1,5 +1,3 @@
-
-#
 Summary:	Xinerama extension library
 Summary(pl):	Biblioteka rozszerzenia Xinerama
 Name:		xorg-lib-libXinerama
@@ -12,13 +10,13 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXinerama-%{version}.tar.
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
-BuildRequires:	xorg-proto-panoramixproto-devel
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-proto-panoramixproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXinerama
-BuildRoot:	%{tmpdir}/libXinerama-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -28,12 +26,11 @@ Xinerama extension library.
 %description -l pl
 Biblioteka rozszerzenia Xinerama.
 
-
 %package devel
 Summary:	Header files libXinerama development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXinerama
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXinerama = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-panoramixproto-devel
 Obsoletes:	libXinerama-devel
@@ -50,12 +47,11 @@ Biblioteka rozszerzenia Xinerama.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXinerama.
 
-
 %package static
-Summary:	Static libXinerama libraries
-Summary(pl):	Biblioteki statyczne libXinerama
-Group:		Development/Libraries
-Requires:	xorg-lib-libXinerama-devel = %{version}-%{release}
+Summary:	Static libXinerama library
+Summary(pl):	Biblioteka statyczna libXinerama
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXinerama-static
 
 %description static
@@ -67,7 +63,6 @@ This package contains the static libXinerama library.
 Biblioteka rozszerzenia Xinerama.
 
 Pakiet zawiera statyczn± bibliotekê libXinerama.
-
 
 %prep
 %setup -q -n libXinerama-%{version}
@@ -97,15 +92,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXinerama.so.*
-
+%attr(755,root,root) %{_libdir}/libXinerama.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libXinerama.so
 %{_libdir}/libXinerama.la
-%attr(755,root,wheel) %{_libdir}/libXinerama.so
 %{_pkgconfigdir}/xinerama.pc
-
 
 %files static
 %defattr(644,root,root,755)
