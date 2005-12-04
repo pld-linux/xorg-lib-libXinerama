@@ -25,8 +25,8 @@ Xinerama extension library.
 Biblioteka rozszerzenia Xinerama.
 
 %package devel
-Summary:	Header files libXinerama development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXinerama
+Summary:	Header files for libXinerama library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,7 +37,7 @@ Obsoletes:	libXinerama-devel
 Xinerama extension library.
 
 This package contains the header files needed to develop programs that
-use these libXinerama.
+use libXinerama.
 
 %description devel -l pl
 Biblioteka rozszerzenia Xinerama.
