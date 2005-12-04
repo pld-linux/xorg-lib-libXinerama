@@ -1,12 +1,12 @@
 Summary:	Xinerama extension library
 Summary(pl):	Biblioteka rozszerzenia Xinerama
 Name:		xorg-lib-libXinerama
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXinerama-%{version}.tar.bz2
-# Source0-md5:	318a12afe549622a9239f4df47f48424
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXinerama-%{version}.tar.bz2
+# Source0-md5:	f5083b2cddf67f55103d9c0d846994b5
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xineramaproto-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXinerama
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
