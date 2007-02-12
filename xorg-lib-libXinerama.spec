@@ -1,5 +1,5 @@
 Summary:	Xinerama extension library
-Summary(pl):	Biblioteka rozszerzenia Xinerama
+Summary(pl.UTF-8):   Biblioteka rozszerzenia Xinerama
 Name:		xorg-lib-libXinerama
 Version:	1.0.1
 Release:	3
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Xinerama extension library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka rozszerzenia Xinerama.
 
 %package devel
 Summary:	Header files for libXinerama library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXinerama
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -39,15 +39,15 @@ Xinerama extension library.
 This package contains the header files needed to develop programs that
 use libXinerama.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka rozszerzenia Xinerama.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXinerama.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXinerama.
 
 %package static
 Summary:	Static libXinerama library
-Summary(pl):	Biblioteka statyczna libXinerama
+Summary(pl.UTF-8):   Biblioteka statyczna libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXinerama-static
@@ -57,10 +57,10 @@ Xinerama extension library.
 
 This package contains the static libXinerama library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka rozszerzenia Xinerama.
 
-Pakiet zawiera statyczn± bibliotekê libXinerama.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXinerama.
 
 %prep
 %setup -q -n libXinerama-%{version}
