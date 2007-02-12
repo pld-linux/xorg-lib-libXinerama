@@ -1,5 +1,5 @@
 Summary:	Xinerama extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia Xinerama
+Summary(pl.UTF-8):	Biblioteka rozszerzenia Xinerama
 Name:		xorg-lib-libXinerama
 Version:	1.0.1
 Release:	3
@@ -26,7 +26,7 @@ Biblioteka rozszerzenia Xinerama.
 
 %package devel
 Summary:	Header files for libXinerama library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXinerama
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -47,7 +47,7 @@ używających biblioteki libXinerama.
 
 %package static
 Summary:	Static libXinerama library
-Summary(pl.UTF-8):   Biblioteka statyczna libXinerama
+Summary(pl.UTF-8):	Biblioteka statyczna libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXinerama-static
