@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xineramaproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.1
 Obsoletes:	libXinerama
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXinerama.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXinerama.so.1
 
 %files devel
 %defattr(644,root,root,755)
