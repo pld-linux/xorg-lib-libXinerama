@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xineramaproto-devel >= 1.1.99.1
-BuildRequires:	xorg-util-util-macros >= 1.1
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXinerama
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +30,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
-Requires:	xorg-proto-xineramaproto-devel
+Requires:	xorg-proto-xineramaproto-devel >= 1.1.99.1
 Obsoletes:	libXinerama-devel
 
 %description devel
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXinerama.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXinerama.so.1
 
@@ -97,9 +97,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXinerama.so
 %{_libdir}/libXinerama.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/Xinerama.h
+%{_includedir}/X11/extensions/panoramiXext.h
 %{_pkgconfigdir}/xinerama.pc
-%{_mandir}/man3/*
+%{_mandir}/man3/Xinerama*.3x*
 
 %files static
 %defattr(644,root,root,755)
