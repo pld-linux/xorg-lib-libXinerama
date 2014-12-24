@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/X11/extensions/Xinerama.h
 %{_includedir}/X11/extensions/panoramiXext.h
 %{_pkgconfigdir}/xinerama.pc
-%{_mandir}/man3/Xinerama*.3x*
+%{_mandir}/man3/Xinerama*.3*
 
 %files static
 %defattr(644,root,root,755)
