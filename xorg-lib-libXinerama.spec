@@ -1,21 +1,24 @@
 Summary:	Xinerama extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia Xinerama
 Name:		xorg-lib-libXinerama
-Version:	1.1.3
-Release:	2
+Version:	1.1.4
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXinerama-%{version}.tar.bz2
-# Source0-md5:	9336dc46ae3bf5f81c247f7131461efd
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXinerama-%{version}.tar.bz2
+# Source0-md5:	0d5f826a197dae74da67af4a9ef35885
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xineramaproto-devel >= 1.1.99.1
 BuildRequires:	xorg-util-util-macros >= 1.8
+Requires:	xorg-lib-libX11 >= 1.6
 Obsoletes:	libXinerama
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,6 +33,7 @@ Summary:	Header files for libXinerama library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-xineramaproto-devel >= 1.1.99.1
 Obsoletes:	libXinerama-devel
