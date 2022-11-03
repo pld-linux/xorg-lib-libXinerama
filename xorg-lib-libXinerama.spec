@@ -1,25 +1,27 @@
 Summary:	Xinerama extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia Xinerama
 Name:		xorg-lib-libXinerama
-Version:	1.1.4
+Version:	1.1.5
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXinerama-%{version}.tar.bz2
-# Source0-md5:	0d5f826a197dae74da67af4a9ef35885
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXinerama-%{version}.tar.xz
+# Source0-md5:	228c877558c265d2f63c56a03f7d3f21
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xineramaproto-devel >= 1.1.99.1
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
-Obsoletes:	libXinerama
+Obsoletes:	libXinerama < 1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +38,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-xineramaproto-devel >= 1.1.99.1
-Obsoletes:	libXinerama-devel
+Obsoletes:	libXinerama-devel < 1.1
 
 %description devel
 Xinerama extension library.
@@ -55,7 +57,7 @@ Summary:	Static libXinerama library
 Summary(pl.UTF-8):	Biblioteka statyczna libXinerama
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXinerama-static
+Obsoletes:	libXinerama-static < 1.1
 
 %description static
 Xinerama extension library.
@@ -96,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXinerama.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXinerama.so.1
 
