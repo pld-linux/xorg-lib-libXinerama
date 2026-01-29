@@ -90,6 +90,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXinerama.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -105,7 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/libXinerama.so
-%{_libdir}/libXinerama.la
 %{_includedir}/X11/extensions/Xinerama.h
 %{_includedir}/X11/extensions/panoramiXext.h
 %{_pkgconfigdir}/xinerama.pc
